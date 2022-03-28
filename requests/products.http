@@ -1,0 +1,51 @@
+@api = http://localhost:3000/products 
+
+//Mostrar los datos de la tabla 
+GET {{api}}
+
+###Ingresar datos a la tabla
+POST {{api}}
+Content-Type: application/json 
+
+{
+    "manzana" : "2",
+    "lote": "fggg", 
+    "usuario": "vgggv",
+    "nombre":"vv",
+    "domicilio":"vv",
+    "colonia":"vv",
+    "tarifa":"dd",
+    "estado": "Activo", 
+    "fecha_descuento":"2022/12/12",
+    "importe_descuento":"xx",
+    "saldo":"ssz",
+    "fecha_ultimo_pago":"2022/12/12"
+}
+
+
+###Mostrar un dato especifico 
+GET {{api}}/20001
+
+### Eliminando un producto 
+DELETE {{api}}/1
+
+###Mostrar el total de datos 
+GET {{api}}/count
+
+###Actualizar 
+PUT {{api}}/1
+Content-Type: application/json
+
+{
+"manzana" : "11",
+    "lote": "ss", 
+    "usuario": "ss",
+    "nombre":"nombre",
+    "domicilio":"ss",
+    "colonia":"ss",
+    "tarifa,estado":"ss", 
+    "fecha_descuento":"2022/12/12",
+    "importe_descuento":"ss",
+    "saldo":"ss",
+    "fecha_ultimo_pago":"2022/12/12"
+}
